@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ُffect 1</title>
+
+    <style>
+        .Effect-1-100 {
+           width: 100%;
+           height: 100vh;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           text-align: center;
+           background-color: #222;
+        }
+        
+        .Effect-1-c-100 {
+           position: relative;
+           font-size: 120px;
+           font-weight: 700;
+           line-height: 1.2;
+           color: #fff;
+           letter-spacing: 8px;
+           z-index: 1;
+        }
+        
+        .Effect-1-c-100:before,
+        .Effect-1-c-100:after {
+           display: block;
+           content: attr(data-glitch);
+           position: absolute;
+           top: 0;
+           left: 0;
+           opacity: 0.8;
+        }
+        
+        .Effect-1-c-100:before {
+           animation: Effect-1-c-100-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+           color: #0ff;
+           z-index: -1;
+        }
+        
+        .Effect-1-c-100:after {
+           animation: Effect-1-c-100-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+           color: #ff00ff;
+           z-index: -2;
+        }
+        
+        @keyframes Effect-1-c-100-color {
+           0% {
+              transform: translate(0);
+           }
+        
+           20% {
+              transform: translate(-5px, 5px);
+           }
+        
+           40% {
+              transform: translate(-5px, -5px);
+           }
+        
+           60% {
+              transform: translate(5px, 5px);
+           }
+        
+           80% {
+              transform: translate(5px, -5px);
+           }
+        
+           to {
+              transform: translate(0);
+           }
+        }
+        </style>
+
+</head>
+<body>
+    <div class="Effect-1-100">
+        <div class="Effect-1-c-100" data-glitch="Yacoub Al-haidari">Yacoub Al-haidari</div>
+     </div>
+     
+ 
+</body>
+</html>
